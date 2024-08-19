@@ -1,0 +1,27 @@
+name: 'Melon Ticket Notifier'
+description: 'GitHub action that notifies ticket availability'
+author: 'MooYeol Prescott Lee'
+inputs:
+  product-id:
+    description: 'Product ID of Target Ticket'
+    required: true
+  schedule-id:
+    description: 'Schedule ID of Target Ticket'
+    required: true
+  seat-id:
+    description: 'Seat Id of Target Ticket'
+    required: true
+  slack-incoming-webhook-url:
+    description: 'URL of Slack Incoming Webhook'
+    required: true
+  message:
+    description: 'Message'
+    required: false
+    default: '티켓사세요'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+branding:
+  icon: 'music'
+  color: 'green'
